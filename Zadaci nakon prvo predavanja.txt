@@ -61,5 +61,4 @@ void main(){
     }
   count+=lastDigit;
   print("ISBN IS VALID: ${count % 11 == 0} ");
-  
 }
