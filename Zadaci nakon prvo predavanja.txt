@@ -1,0 +1,65 @@
+(1) 
+/* Create class that prints out "Hello World" */
+
+void main(){
+  helloWorld hello2=new helloWorld();
+  hello2.greet();
+}
+class helloWorld{
+  void greet(){
+    print("Hello World!");
+    }
+}
+
+(2)
+/* Create functio which takes optional parameter and prints out dependable what it gets.
+void main(){
+  printsOut("Antoan");
+ 
+}
+printsOut([name]){
+  if(name != null){
+    print("This is $name, this is me");
+  }
+   else{
+     print("This is somebody, this is me");
+   }
+}
+
+(3) Write a song 99 bottles of beer
+
+void main(){
+  
+  for(int i=99;i>=0;i--){
+    
+    if(i==0){
+      print("No more bottles of beer on the wall, no more bottles of beer.\n Go to the store and buy some more,  99 bottles of beer on the wall.");
+      break;
+    }
+    else if(i==1){
+      print("1 bottle of beer on the wall, 1 bottle of beer. \n Take one down and pass it around, no more bottles of beer on the wall. \n");
+    }
+    else{
+    print("${i} bottles of beer on the wall, ${i} bottles of beer. \n Take one down and pass it around, ${i-1} bottles of beer on the wall. \n");
+    }
+  }
+}
+
+
+/* ISBN*/
+void main(){
+  var rawIsbn ="3-598-21508-8";
+  var isbn =rawIsbn.replaceAll('-','');
+  int count=0;
+  
+  print("FORMATTED ISBN: $isbn" );
+  int lastDigit=isbn[isbn.length-1] == "x" ? 10 : int.parse(isbn[isbn.length-1]);
+  
+  for(var i=0;i<isbn.length-1;i++ ){
+    count+=int.parse(isbn[i]*(isbn.length-i));
+    
+    }
+  count+=lastDigit;
+  print("ISBN IS VALID: ${count % 11 == 0} ");
+  
+}
